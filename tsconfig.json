@@ -23,7 +23,8 @@
     "strictNullChecks": true,
     "allowImportingTsExtensions": true,
     "jsx": "react",
-    "allowUmdGlobalAccess": true
+    "allowUmdGlobalAccess": true,
+    "noUnusedLocals": false
   },
   "exclude": [
     "node_modules",
