@@ -21,8 +21,10 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    "strictNullChecks": true
-  },
+    "strictNullChecks": true,
+    "allowImportingTsExtensions": true,
+"jsx": "react",
+    "allowUmdGlobalAccess": true,  },
   "exclude": [
     "node_modules",
     "build",
@@ -33,3 +35,4 @@
     "src/setupTests.ts"
   ],
 }
+
