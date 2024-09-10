@@ -4,7 +4,7 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-   "compilerOptions": {
+  "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
@@ -23,8 +23,9 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "allowImportingTsExtensions": true,
-"jsx": "react",
-    "allowUmdGlobalAccess": true,  },
+    "jsx": "react",
+    "allowUmdGlobalAccess": true
+  },
   "exclude": [
     "node_modules",
     "build",
@@ -33,6 +34,5 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
-  ],
+  ]
 }
-
