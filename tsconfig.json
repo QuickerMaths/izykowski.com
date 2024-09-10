@@ -15,7 +15,6 @@
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
     "noImplicitReturns": true,
@@ -24,7 +23,8 @@
     "strictNullChecks": true,
     "allowImportingTsExtensions": true,
     "jsx": "react",
-    "allowUmdGlobalAccess": true
+    "allowUmdGlobalAccess": true,
+    "noUnusedLocals": false
   },
   "exclude": [
     "node_modules",
