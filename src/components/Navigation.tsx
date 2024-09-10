@@ -14,6 +14,12 @@ const Navigation = () => {
           <li>
             <NavLink to="/galeria">Galeria</NavLink>
           </li>
+          <li>
+            <NavLink to="/kalendarz">Kalendarz</NavLink>
+          </li>
+          <li>
+            <NavLink to="/praca">Praca</NavLink>
+          </li>
         </ul>
       </nav>
     </header>
