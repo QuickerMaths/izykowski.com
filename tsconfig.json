@@ -24,7 +24,8 @@
     "allowImportingTsExtensions": true,
     "jsx": "react",
     "allowUmdGlobalAccess": true,
-    "noUnusedLocals": false
+    "noUnusedLocals": true,
+    "noUnusedParameters": false
   },
   "exclude": [
     "node_modules",
