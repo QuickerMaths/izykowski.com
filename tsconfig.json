@@ -29,6 +29,7 @@
     "skipLibCheck": true
   },
   "exclude": [
+    "src/components/ui",
     "node_modules",
     "build",
     "scripts",
