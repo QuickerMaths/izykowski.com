@@ -25,7 +25,7 @@
     "jsx": "react",
     "allowUmdGlobalAccess": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": false
+    "noUnusedParameters": true
   },
   "exclude": [
     "node_modules",
