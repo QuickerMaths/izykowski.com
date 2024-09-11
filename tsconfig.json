@@ -26,9 +26,6 @@
     "allowUmdGlobalAccess": true,
     "noUnusedParameters": false,
     "noUnusedLocals": false,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
     "skipLibCheck": true
   },
   "exclude": [
