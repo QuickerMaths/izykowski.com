@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 interface Event {
   date: Date;
+  time: string;
   description: string;
 }
 
@@ -11,6 +12,7 @@ const Calendar: React.FC = () => {
   const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
   const [events, setEvents] = useState<Event[]>([]);
   const [newEventDescription, setNewEventDescription] = useState<string>('');
+  const [newEventTime, setNewEventTime] = useState<string>('12:00');
 
   const daysOfWeek = ['N', 'Pn', 'Wt', 'Śr', 'Czw', 'Pt', 'Sb'];
 
@@ -47,21 +49,23 @@ const Calendar: React.FC = () => {
   const handleAddEvent = () => {
     if (newEventDescription.trim() === '') return;
 
-    const eventExists = events.find(
-      (event) => event.date.toDateString() === selectedDate.toDateString()
-    );
-    if (!eventExists) {
-      setEvents([...events, { date: selectedDate, description: newEventDescription }]);
-      setNewEventDescription('');
-    }
+    const newEvent: Event = {
+      date: selectedDate,
+      time: newEventTime,
+      description: newEventDescription,
+    };
+
+    setEvents([...events, newEvent]);
+    setNewEventDescription('');
+    setNewEventTime('12:00');
   };
 
-  const handleRemoveEvent = (date: Date) => {
-    setEvents(events.filter((event) => event.date.toDateString() !== date.toDateString()));
+  const handleRemoveEvent = (eventToRemove: Event) => {
+    setEvents(events.filter((event) => event !== eventToRemove));
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-gray-50 rounded-lg shadow-md">
+    <div className="w-full mx-auto p-6 bg-gray-50 rounded-lg shadow-md">
       <h1 className="text-2xl font-bold text-center mb-4">Kalendarz</h1>
 
       <div className="flex justify-between items-center mb-4">
@@ -111,10 +115,9 @@ const Calendar: React.FC = () => {
           >
             {day + 1}
             {events.some(
-              (event) => event.date.toDateString() === new Date(currentYear, currentMonth, day + 1).toDateString()
-            ) && (
-              <span className="text-xs text-green-500 block">Wydarzenie</span>
-            )}
+              (event) =>
+                event.date.toDateString() === new Date(currentYear, currentMonth, day + 1).toDateString()
+            ) && <span className="text-xs text-green-500 block">Wydarzenie</span>}
           </div>
         ))}
       </div>
@@ -127,10 +130,12 @@ const Calendar: React.FC = () => {
             .filter((event) => event.date.toDateString() === selectedDate.toDateString())
             .map((event, index) => (
               <div key={index} className="mb-2 flex justify-between items-center bg-gray-100 p-2 rounded">
-                <p>{event.description}</p>
+                <div>
+                  <p>{event.time} - {event.description}</p>
+                </div>
                 <button
                   className="px-2 py-1 bg-red-400 text-white rounded hover:bg-red-500"
-                  onClick={() => handleRemoveEvent(event.date)}
+                  onClick={() => handleRemoveEvent(event)}
                 >
                   Usuń
                 </button>
@@ -144,6 +149,12 @@ const Calendar: React.FC = () => {
               placeholder="Dodaj nowe wydarzenie"
               value={newEventDescription}
               onChange={(e) => setNewEventDescription(e.target.value)}
+            />
+            <input
+              type="time"
+              className="border p-2 w-full rounded mb-2"
+              value={newEventTime}
+              onChange={(e) => setNewEventTime(e.target.value)}
             />
             <button
               className="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
