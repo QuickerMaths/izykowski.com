@@ -14,7 +14,7 @@ const JobPage = () => {
       </h2>
 
       {/* Chirurgia Plastyczna */}
-      <div className="mb-6">
+      <div className="mb-6 w-1/2">
         <img
           src="https://www.kliniki.pl/photos/162/chirurgia-plastyczna_161136_600x360fc.jpg"
           alt="Chirurgia Plastyczna"
@@ -32,7 +32,7 @@ const JobPage = () => {
       </div>
 
       {/* Endoskopia */}
-      <div className="mb-6">
+      <div className="mb-6 w-1/2">
         <img
           src="https://fizjoterapeuty.pl/wp-content/uploads/2020/05/endoskopia.jpg"
           alt="Endoskopia"
@@ -51,7 +51,7 @@ const JobPage = () => {
       </div>
 
       {/* Stomatologia */}
-      <div className="mb-6">
+      <div className="mb-6 w-1/2">
         <img
           src="https://medinklinika.com/wp-content/uploads/2022/03/stomatologia-zachowawcza-2-1024x683.jpg"
           alt="Stomatologia"
