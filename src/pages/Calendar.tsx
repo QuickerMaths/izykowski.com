@@ -4,6 +4,8 @@ interface Event {
   date: Date;
   time: string;
   description: string;
+  phoneNumber: string;
+  email: string;
 }
 
 const Calendar: React.FC = () => {
@@ -13,6 +15,8 @@ const Calendar: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [newEventDescription, setNewEventDescription] = useState<string>('');
   const [newEventTime, setNewEventTime] = useState<string>('12:00');
+  const [newEventPhoneNumber, setNewEventPhoneNumber] = useState<string>('');
+  const [newEventEmail, setNewEventEmail] = useState<string>('');
 
   const daysOfWeek = ['N', 'Pn', 'Wt', 'Śr', 'Czw', 'Pt', 'Sb'];
 
@@ -47,17 +51,28 @@ const Calendar: React.FC = () => {
   };
 
   const handleAddEvent = () => {
-    if (newEventDescription.trim() === '') return;
+    if (
+      newEventDescription.trim() === '' ||
+      newEventPhoneNumber.trim() === '' ||
+      newEventEmail.trim() === ''
+    ) {
+      alert('Proszę wypełnić wszystkie pola.');
+      return;
+    }
 
     const newEvent: Event = {
       date: selectedDate,
       time: newEventTime,
       description: newEventDescription,
+      phoneNumber: newEventPhoneNumber,
+      email: newEventEmail,
     };
 
     setEvents([...events, newEvent]);
     setNewEventDescription('');
     setNewEventTime('12:00');
+    setNewEventPhoneNumber('');
+    setNewEventEmail('');
   };
 
   const handleRemoveEvent = (eventToRemove: Event) => {
@@ -104,7 +119,7 @@ const Calendar: React.FC = () => {
         {Array.from({ length: daysInMonth }, (_, day) => (
           <div
             key={day + 1}
-            className={`p-2 cursor-pointer border ${
+            className={`p-6 cursor-pointer border ${
               selectedDate.getDate() === day + 1 &&
               selectedDate.getMonth() === currentMonth &&
               selectedDate.getFullYear() === currentYear
@@ -132,6 +147,8 @@ const Calendar: React.FC = () => {
               <div key={index} className="mb-2 flex justify-between items-center bg-gray-100 p-2 rounded">
                 <div>
                   <p>{event.time} - {event.description}</p>
+                  <p>📞 {event.phoneNumber}</p>
+                  <p>✉️ {event.email}</p>
                 </div>
                 <button
                   className="px-2 py-1 bg-red-400 text-white rounded hover:bg-red-500"
@@ -155,6 +172,20 @@ const Calendar: React.FC = () => {
               className="border p-2 w-full rounded mb-2"
               value={newEventTime}
               onChange={(e) => setNewEventTime(e.target.value)}
+            />
+            <input
+              type="text"
+              className="border p-2 w-full rounded mb-2"
+              placeholder="Numer telefonu"
+              value={newEventPhoneNumber}
+              onChange={(e) => setNewEventPhoneNumber(e.target.value)}
+            />
+            <input
+              type="email"
+              className="border p-2 w-full rounded mb-2"
+              placeholder="Adres email"
+              value={newEventEmail}
+              onChange={(e) => setNewEventEmail(e.target.value)}
             />
             <button
               className="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"

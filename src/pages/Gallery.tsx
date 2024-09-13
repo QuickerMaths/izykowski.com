@@ -7,6 +7,17 @@ const images = [
   'http://www.izykowski.com.pl/wp-content/uploads/2014/03/znieczulenie_doroslych_1-300x225.jpg',
   'https://rankomat.pl/thumbs/header_bg/2020-06/badanie-rentgenem.jpg',
   'https://pliki2.portalsamorzadowy.pl/i/16/78/57/167857_r0_940.jpg',
+  "https://alfa-clinic.pl/wp-content/uploads/2023/12/Alfa_Clinic_budynek-1024x683.webp",
+  "https://jaw.pl/static/files/gallery/167/1559642_62487.jpg",
+  "https://www.prawo.pl/gfx/prawopl/_thumbs/pl/wkdokumenty/000/526/430/1/pielegniarka_00010_istock,nICD62SaolTLo7bXW5mZ.jpg",
+  "https://images.pb.pl/filtered/713801d1-a126-40ba-a6dc-1aa2a7c66e53/3f46c8d9-fb85-53f1-831b-21973596e9ec_w_830.jpg",
+  "https://precisdent.pl/wp-content/uploads/2023/07/koferdam-dentystczny.webp",
+  "https://zw.pl/multimedia/foto/icon_9f3f63ec524134ed7933a31be5601fc2.jpg",
+  "https://novmed.com.pl/wp-content/uploads/2023/03/ile-odszkodowania-za-zlamana-noge-w-kostce-900x600.jpg",
+  "https://static.ktomalek.pl/blog/zdjecie/aparat-ortodontyczny.jpg",
+  "https://denticon.pl/wp-content/uploads/2023/06/caroline-lm-8BkF0sTC6Uo-unsplash-1024x768.jpg",
+  "https://przychodniadental.pl/images/BLOG/przebieg-leczenia-zebow-pod-narkoza.webp",
+  "https://endo-klinika.pl/wp-content/uploads/2020/12/Leczenie-zebow-u-dzieci-podczas-pandemii-koronawirusa-endo-klinika-lodz.jpg"
 ];
 
 const Gallery: React.FC = () => {

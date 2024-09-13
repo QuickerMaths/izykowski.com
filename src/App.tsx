@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import CalendarPage from "./pages/Calendar";
 import JobPage from "@/pages/job.tsx";
+import Contact from "./pages/Contact";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="galeria" element={<Gallery />} />
         <Route path="kalendarz" element={<CalendarPage />} />
         <Route path="praca" element={<JobPage />} />
+        <Route path="kontakt" element={<Contact />} />
 
       </Route>
     </Routes>
