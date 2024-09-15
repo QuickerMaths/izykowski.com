@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Routes>
+
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="o-mnie" element={<About />} />
