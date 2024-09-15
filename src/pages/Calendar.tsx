@@ -80,32 +80,32 @@ const Calendar: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto p-6 bg-gray-50 rounded-lg shadow-md">
-      <h1 className="text-2xl font-bold text-center mb-4">Kalendarz</h1>
+    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
+      <h1 className="text-3xl font-bold text-center mb-4">Kalendarz</h1>
 
       <div className="flex justify-between items-center mb-4">
         <button
-          className="px-3 py-1 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded"
+          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg shadow-md transition-all"
           onClick={handlePrevMonth}
         >
           Poprzedni
         </button>
-        <span className="text-xl">
+        <span className="text-xl font-semibold">
           {`${new Date(currentYear, currentMonth).toLocaleString('pl-PL', {
             month: 'long',
           })} ${currentYear}`}
         </span>
         <button
-          className="px-3 py-1 bg-gray-300 hover:bg-gray-400 text-gray-800 rounded"
+          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg shadow-md transition-all"
           onClick={handleNextMonth}
         >
           Następny
         </button>
       </div>
 
-      <div className="grid grid-cols-7 gap-2 text-center font-semibold">
+      <div className="grid grid-cols-7 gap-4 text-center font-semibold mb-4">
         {daysOfWeek.map((day) => (
-          <div key={day} className="text-gray-700">
+          <div key={day} className="text-gray-600 uppercase text-sm">
             {day}
           </div>
         ))}
@@ -119,13 +119,13 @@ const Calendar: React.FC = () => {
         {Array.from({ length: daysInMonth }, (_, day) => (
           <div
             key={day + 1}
-            className={`p-6 cursor-pointer border ${
+            className={`p-4 cursor-pointer border rounded-lg shadow-sm ${
               selectedDate.getDate() === day + 1 &&
               selectedDate.getMonth() === currentMonth &&
               selectedDate.getFullYear() === currentYear
-                ? 'bg-green-200'
-                : 'bg-white'
-            }`}
+                ? 'bg-teal-500 text-white'
+                : 'bg-gray-100 hover:bg-gray-200'
+            } transition-all`}
             onClick={() => handleDayClick(day + 1)}
           >
             {day + 1}
@@ -138,20 +138,25 @@ const Calendar: React.FC = () => {
       </div>
 
       {selectedDate && (
-        <div className="mt-4">
-          <h2 className="text-lg font-semibold mb-2">Wydarzenia na dzień {selectedDate.toLocaleDateString()}</h2>
+        <div className="mt-6">
+          <h2 className="text-lg font-semibold mb-4">
+            Wydarzenia na dzień {selectedDate.toLocaleDateString()}
+          </h2>
 
           {events
             .filter((event) => event.date.toDateString() === selectedDate.toDateString())
             .map((event, index) => (
-              <div key={index} className="mb-2 flex justify-between items-center bg-gray-100 p-2 rounded">
+              <div
+                key={index}
+                className="mb-4 flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md"
+              >
                 <div>
-                  <p>{event.time} - {event.description}</p>
+                  <p className="font-medium">{event.time} - {event.description}</p>
                   <p>📞 {event.phoneNumber}</p>
                   <p>✉️ {event.email}</p>
                 </div>
                 <button
-                  className="px-2 py-1 bg-red-400 text-white rounded hover:bg-red-500"
+                  className="px-3 py-1 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 transition-all"
                   onClick={() => handleRemoveEvent(event)}
                 >
                   Usuń
@@ -159,36 +164,36 @@ const Calendar: React.FC = () => {
               </div>
             ))}
 
-          <div className="mt-4">
+          <div className="mt-6">
             <input
               type="text"
-              className="border p-2 w-full rounded mb-2"
+              className="border p-2 w-full rounded-lg shadow-md mb-4"
               placeholder="Dodaj nowe wydarzenie"
               value={newEventDescription}
               onChange={(e) => setNewEventDescription(e.target.value)}
             />
             <input
               type="time"
-              className="border p-2 w-full rounded mb-2"
+              className="border p-2 w-full rounded-lg shadow-md mb-4"
               value={newEventTime}
               onChange={(e) => setNewEventTime(e.target.value)}
             />
             <input
               type="text"
-              className="border p-2 w-full rounded mb-2"
+              className="border p-2 w-full rounded-lg shadow-md mb-4"
               placeholder="Numer telefonu"
               value={newEventPhoneNumber}
               onChange={(e) => setNewEventPhoneNumber(e.target.value)}
             />
             <input
               type="email"
-              className="border p-2 w-full rounded mb-2"
+              className="border p-2 w-full rounded-lg shadow-md mb-4"
               placeholder="Adres email"
               value={newEventEmail}
               onChange={(e) => setNewEventEmail(e.target.value)}
             />
             <button
-              className="w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+              className="w-full px-6 py-3 bg-teal-500 text-white rounded-lg shadow-md hover:bg-teal-600 transition-all"
               onClick={handleAddEvent}
             >
               Dodaj Wydarzenie
