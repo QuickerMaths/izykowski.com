@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: rgb(232, 232, 232);
@@ -29,6 +30,8 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
+  /* Dark mode */
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -56,11 +59,99 @@
     --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
+  /* Default border and background styling for all elements */
   * {
     @apply border-border;
   }
+
+  /* Base styling for body */
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Additional base elements styling suggestions */
+
+  /* Add default border radius for elements */
+  .rounded {
+    border-radius: var(--radius);
+  }
+
+  /* Default card styling */
+  .card {
+    background-color: var(--card);
+    color: var(--card-foreground);
+    border-radius: var(--radius);
+    @apply shadow-lg p-4;
+  }
+
+  /* Button styling for primary buttons */
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    @apply py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition duration-300;
+  }
+
+  /* Muted and secondary button styling */
+  .btn-secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    @apply py-2 px-4 rounded-lg shadow hover:bg-opacity-80 transition duration-300;
+  }
+
+  /* Adding border and hover effect to input elements */
+  input {
+    border-color: var(--border);
+    background-color: var(--input);
+    @apply rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+
+  /* Accent color for links */
+  a {
+    color: var(--accent-foreground);
+    @apply underline hover:text-primary transition-colors;
+  }
+
+  /* Box shadow and transition for popovers */
+  .popover {
+    background-color: var(--popover);
+    color: var(--popover-foreground);
+    @apply rounded-lg shadow-md p-4 transition duration-300;
+  }
+
+  /* Default styling for charts */
+  .chart-color-1 {
+    background-color: hsl(var(--chart-1));
+  }
+
+  .chart-color-2 {
+    background-color: hsl(var(--chart-2));
+  }
+
+  .chart-color-3 {
+    background-color: hsl(var(--chart-3));
+  }
+
+  .chart-color-4 {
+    background-color: hsl(var(--chart-4));
+  }
+
+  .chart-color-5 {
+    background-color: hsl(var(--chart-5));
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      display: block;
+      width: 100%;
+    }
+    .navbar ul {
+      display: none;
+    }
+    .navbar.open ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 }
