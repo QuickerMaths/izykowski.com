@@ -13,13 +13,15 @@ const Home: React.FC = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          poster="https://media.istockphoto.com/id/1408958950/de/video/arzt-im-gespr%C3%A4ch-mit-dempatienten.jpg?s=640x640&k=20&c=sNMOFpHr3j0oh5s4VBolHwgx7h3caCU7kLl5525WMPE="
         >
           <source
-            src="https://klinikaambroziak.pl/video/video2.mp4"
+            src="https://media.istockphoto.com/id/1408958950/de/video/arzt-im-gespr%C3%A4ch-mit-dempatienten.mp4?s=mp4-640x640-is&k=20&c=Jr0EvHTCbMGk99X6BNbb1_zViE-wEHSVuDAOxKadzK8="
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
+
         {/* Przyciemnienie */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
 
