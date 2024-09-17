@@ -6,9 +6,7 @@ const Contact = () => {
     <div className="bg-white py-16 px-6 text-center">
       {/* Nagłówek */}
       <h1 className="text-6xl font-bold mb-4">Kontakt</h1>
-      <p className="text-2xl mb-8">
-        Zapraszamy do Alfa Clinic. Jesteśmy do Twojej dyspozycji!
-      </p>
+      <p className="text-2xl mb-8">Jesteśmy do Twojej dyspozycji!</p>
 
       {/* Dane kontaktowe */}
       <div className="flex flex-col items-center mb-12">
@@ -72,7 +70,7 @@ const Contact = () => {
 
         {/* Informacje */}
         <div className="md:w-1/3 text-center md:text-left ml-8">
-          <h2 className="text-2xl font-bold mb-4">Alfa Clinic</h2>
+          <h2 className="text-2xl font-bold mb-4">Klinika medyczna</h2>
           <p className="text-lg mb-2">Berlin Charlottenburgerhaus 107</p>
           <p className="text-lg mb-4">Godziny otwarcia:</p>
           <p className="text-lg mb-2">pon-pt: 10:00-20:00</p>
@@ -83,7 +81,7 @@ const Contact = () => {
             href="https://www.google.com/maps/place/Berlin+Charlottenburgerhaus+107"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block bg-transparent text-teal-600 py-2 px-6 border border-teal-600 rounded-full hover:bg-teal-600 hover:text-white transition-all"
+            className="mt-4 inline-block bg-transparent text-teal-600 py-2 px-6 border border-teal-600 rounded-full hover:bg-teal-600 hover:text-white transition-all no-underline"
           >
             Mapa dojazdu
           </a>
