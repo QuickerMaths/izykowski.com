@@ -6,16 +6,16 @@ import Footer from "./Footer.tsx";
 
 const Layout = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
       {/* Główna zawartość strony z paddingiem od góry */}
-      <div className="pt-16">
+      <main className="flex-grow pt-16">
         <Suspense fallback={<Spinner className="w-[100px] h-[100px]" />}>
           <Outlet />
         </Suspense>
-      </div>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
