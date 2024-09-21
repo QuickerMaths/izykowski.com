@@ -60,32 +60,25 @@ const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 space-y-4 md:space-y-0 md:space-x-6">
             <div className="md:w-1/2">
               <img
-                src="https://www.kliniki.pl/photos/162/chirurgia-plastyczna_161136_600x360fc.jpg"
+                src="https://wppg.pl/filez/01_ginekologia.jpg"
                 alt="Medical Image 1"
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
             <div className="md:w-1/2 text-left">
-              <h2 className="text-3xl font-bold mb-4">CHIRURGIA PLASTYCZNA</h2>
-              <p className="mb-4">ZABIEGI PIELĘGNACYJNE W KLINICE </p>
+              <h2 className="text-3xl font-bold mb-4">GINEKOLOGIA</h2>
+              <p className="mb-4">ZABIEGI GINEKOLOGICZNE W KLINICE </p>
               <p className="mb-4">
-                Chirurgia plastyczna to dziedzina medycyny zajmująca się
-                rekonstrukcją, korekcją oraz zmianą wyglądu ciała. W naszej
-                klinice oferujemy szeroki zakres zabiegów, które poprawiają
-                zarówno funkcjonalność, jak i estetykę różnych części ciała.
-                Dzięki nowoczesnym technologiom oraz wykwalifikowanym
-                specjalistom, zapewniamy bezpieczne i skuteczne rozwiązania dla
-                naszych pacjentów. Oferujemy zabiegi takie jak lifting twarzy,
-                korekta nosa, powiększanie piersi, a także usuwanie blizn i
-                defektów skórnych. Dbamy o to, aby każdy pacjent czuł się pewnie
-                i komfortowo, dążąc do osiągnięcia naturalnych, harmonijnych
-                efektów."
+                Ddziedzina medycyny zajmująca się profilaktyką i leczeniem
+                chorób żeńskiego układu płciowego. Najczęstsze problemy, jakimi
+                zajmują się ginekolodzy, to: zaburzenia miesiączkowania, stany
+                zapalne pochwy, antykonce.
               </p>
-              <Link to="/uslugi">
+              <a href="https://www.lipsum.com" target="_blank">
                 <button className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
                   Sprawdź nasze usługi
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -110,11 +103,11 @@ const Home: React.FC = () => {
                 powikłań. W naszej klinice oferujemy kompleksową opiekę w
                 zakresie diagnostyki i leczenia metodami endoskopowymi."
               </p>
-              <Link to="/uslugi">
+              <a href="https://www.lipsum.com" target="_blank">
                 <button className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
                   Sprawdź nasze usługi
                 </button>
-              </Link>
+              </a>
             </div>
             <div className="md:w-1/2">
               <img
@@ -151,11 +144,11 @@ const Home: React.FC = () => {
                 znieczulenia. Nasi specjaliści pomagają w przywróceniu zdrowego
                 uśmiechu, poprawiając estetykę oraz funkcjonalność uzębienia."
               </p>
-              <Link to="/uslugi">
+              <a href="https://www.lipsum.com" target="_blank">
                 <button className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
                   Sprawdź nasze usługi
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
