@@ -72,7 +72,7 @@ const Home: React.FC = () => {
             </div>
             <div className="md:w-1/2 text-left">
               <h2 className="text-3xl font-bold mb-4">GINEKOLOGIA</h2>
-              <p className="mb-4">ZABIEGI GINEKOLOGICZNE W KLINICE </p>
+              <p className="mb-4">ZNIECZULENIA GINEKOLOGICZNE W KLINICE </p>
               <p className="mb-4">
                 Dziedzina medycyny zajmująca się profilaktyką i leczeniem
                 chorób żeńskiego układu płciowego. Najczęstsze problemy, jakimi
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 space-y-4 md:space-y-0 md:space-x-6">
             <div className="md:w-1/2 text-left">
               <h2 className="text-3xl font-bold mb-4">ENDOSKOPIA</h2>
-              <p className="mb-4">ZABIEGI PIELĘGNACYJNE W KLINICE </p>
+              <p className="mb-4">ZNIECZULENIA PIELĘGNACYJNE W KLINICE </p>
               <p className="mb-4">
                 "Endoskopia to nowoczesna technika diagnostyczna i
                 terapeutyczna, która pozwala na szczegółowe oglądanie wnętrza
@@ -159,7 +159,7 @@ const Home: React.FC = () => {
             </div>
             <div className="md:w-2/3 text-center">
               <h2 className="text-3xl font-bold mb-4">STOMATOLOGIA </h2>
-              <p className="mb-4">ZABIEGI STOMATOLOGICZNE W KLINICE </p>
+              <p className="mb-4">ZNIECZULENIA STOMATOLOGICZNE W KLINICE </p>
               <p className="mb-4">
                 "Stomatologia to dziedzina medycyny zajmująca się profilaktyką,
                 diagnostyką i leczeniem chorób zębów, dziąseł oraz jamy ustnej.
