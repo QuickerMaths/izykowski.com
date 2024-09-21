@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           {/* Kontener na tekst i przyciski wyśrodkowane w poziomie i pionie */}
           <div className="flex flex-col items-center justify-center space-y-6 absolute top-1/2 transform -translate-y-1/2">
             <h1 className="text-xl md:text-5xl px-5 font-bold mb-4 md:mb-0 animate-fadeInUp">
-              Indywidualna specjalistyczna praktyka lekarska Jan Iżykowski
+              Indywidualna Specjalistyczna Praktyka Lekarska <br/> LEK. MED. Jan Iżykowski
             </h1>
             {/* Przyciski w jednej linii */}
             <div className="flex space-x-4">
@@ -37,9 +37,14 @@ const Home: React.FC = () => {
                   Poznajmy się
                 </button>
               </Link>
-              <Link to="/kalendarz">
+              <Link to="/kontakt">
                 <button className="text-xs md:text-2xl floating-button bg-transparent text-white py-2 px-3 md:py-3 md:px-8 border-2 border-white rounded-full shadow-lg uppercase transition-all duration-300 hover:bg-white hover:text-gray-900">
-                  Umów się na wizytę
+                  Skontaktuj się ze mną
+                </button>
+              </Link>
+              <Link to="/aktualności">
+                <button className="text-xs md:text-2xl floating-button bg-transparent text-white py-2 px-3 md:py-3 md:px-8 border-2 border-white rounded-full shadow-lg uppercase transition-all duration-300 hover:bg-white hover:text-gray-900">
+                  Co nowego?
                 </button>
               </Link>
             </div>
@@ -69,11 +74,12 @@ const Home: React.FC = () => {
               <h2 className="text-3xl font-bold mb-4">GINEKOLOGIA</h2>
               <p className="mb-4">ZABIEGI GINEKOLOGICZNE W KLINICE </p>
               <p className="mb-4">
-                Ddziedzina medycyny zajmująca się profilaktyką i leczeniem
+                Dziedzina medycyny zajmująca się profilaktyką i leczeniem
                 chorób żeńskiego układu płciowego. Najczęstsze problemy, jakimi
                 zajmują się ginekolodzy, to: zaburzenia miesiączkowania, stany
                 zapalne pochwy, antykonce.
               </p>
+
               <a href="https://www.lipsum.com" target="_blank">
                 <button className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
                   Sprawdź nasze usługi
@@ -165,8 +171,17 @@ const Home: React.FC = () => {
                 znieczulenia. Nasi specjaliści pomagają w przywróceniu zdrowego
                 uśmiechu, poprawiając estetykę oraz funkcjonalność uzębienia."
               </p>
+              <p>
+                Znieczulenie do zabiegów stomatologicznych jest najczęściej znieczuleniem ogólnym.
+
+              </p>
+              <p>
+                Dokładnie przeprowadzony wywiad, analiza ankiety oraz ewentualne badanie kliniczne decydują o możliwości
+                wykonania znieczulenia ogólnego w trybie ambulatoryjnym.
+              </p>
               <a href="https://www.lipsum.com" target="_blank">
-                <button className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
+                <button
+                    className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
                   Sprawdź nasze usługi
                 </button>
               </a>
@@ -179,7 +194,8 @@ const Home: React.FC = () => {
       <section className="py-16 bg-[#F5F5F5]">
         <div className="container mx-auto text-center">
           <Link to="/kontakt">
-            <button className="mt-6 bg-teal-600 text-white py-3 px-24 w-full max-w-[600px] rounded-full shadow-md hover:bg-teal-700 transition duration-300">
+            <button
+                className="mt-6 bg-teal-600 text-white py-3 px-24 w-full max-w-[600px] rounded-full shadow-md hover:bg-teal-700 transition duration-300">
               Skontaktuj się ze mną
             </button>
           </Link>
