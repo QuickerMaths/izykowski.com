@@ -59,6 +59,16 @@ const MobileMenu = () => {
             </li>
             <li>
               <NavLink
+                to="/aktualności"
+                className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
+                style={{ textDecoration: "none" }}
+                onClick={() => setOpen(false)}
+              >
+                Aktualności
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/galeria"
                 className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
                 style={{ textDecoration: "none" }}
@@ -124,6 +134,15 @@ const DesktopMenu = () => {
             style={{ textDecoration: "none" }}
           >
             O Mnie
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/aktualności"
+            className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
+            style={{ textDecoration: "none" }}
+          >
+            Aktualności
           </NavLink>
         </li>
         <li>
