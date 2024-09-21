@@ -13,38 +13,32 @@ const Home: React.FC = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          poster="https://media.istockphoto.com/id/1408958950/de/video/arzt-im-gespr%C3%A4ch-mit-dempatienten.jpg?s=640x640&k=20&c=sNMOFpHr3j0oh5s4VBolHwgx7h3caCU7kLl5525WMPE="
         >
           <source
-            src="https://media.istockphoto.com/id/1408958950/de/video/arzt-im-gespr%C3%A4ch-mit-dempatienten.mp4?s=mp4-640x640-is&k=20&c=Jr0EvHTCbMGk99X6BNbb1_zViE-wEHSVuDAOxKadzK8="
+            src="https://klinikaambroziak.pl/video/video2.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
         </video>
-
         {/* Przyciemnienie */}
         <div className="absolute inset-0 bg-black opacity-40"></div>
 
         {/* Zawartość nagłówka */}
         <div className="container mx-auto  z-10 h-full flex flex-col justify-center items-center text-center text-white">
           {/* Kontener na tekst i przyciski wyśrodkowane w poziomie i pionie */}
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 absolute top-1/2 transform -translate-y-1/2">
-            <h1 className="text-5xl font-bold mb-4 md:mb-0 animate-fadeInUp">
-              Lekarz, twój najlepszy przyjaciel
+          <div className="flex flex-col items-center justify-center space-y-6 absolute top-1/2 transform -translate-y-1/2">
+            <h1 className="text-xl md:text-5xl px-5 font-bold mb-4 md:mb-0 animate-fadeInUp">
+              Indywidualna specjalistyczna praktyka lekarska Jan Iżykowski
             </h1>
-            <p className="text-xl mb-6 md:mb-0 animate-fadeInUp">
-              Zadbaj o swoje zdrowie z najlepszym specjalistą.
-            </p>
-
             {/* Przyciski w jednej linii */}
             <div className="flex space-x-4">
               <Link to="/o-mnie">
-                <button className="floating-button bg-transparent text-white py-3 px-8 border-2 border-white rounded-full shadow-lg uppercase transition-all duration-300 hover:bg-white hover:text-gray-900">
+                <button className="text-xs md:text-2xl floating-button bg-transparent text-white py-2 px-3 md:py-3 md:px-8 border-2 border-white rounded-full shadow-lg uppercase transition-all duration-300 hover:bg-white hover:text-gray-900">
                   Poznajmy się
                 </button>
               </Link>
               <Link to="/kalendarz">
-                <button className="floating-button bg-transparent text-white py-3 px-8 border-2 border-white rounded-full shadow-lg uppercase transition-all duration-300 hover:bg-white hover:text-gray-900">
+                <button className="text-xs md:text-2xl floating-button bg-transparent text-white py-2 px-3 md:py-3 md:px-8 border-2 border-white rounded-full shadow-lg uppercase transition-all duration-300 hover:bg-white hover:text-gray-900">
                   Umów się na wizytę
                 </button>
               </Link>
