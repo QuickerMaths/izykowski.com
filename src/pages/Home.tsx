@@ -103,17 +103,38 @@ const Home: React.FC = () => {
                 powikłań. W naszej klinice oferujemy kompleksową opiekę w
                 zakresie diagnostyki i leczenia metodami endoskopowymi."
               </p>
+              <p>
+                Znieczulenie do endoskopii jest to krótkotrwałe znieczulenie dożylne,
+                bez stosowania środków zwiotczających mięśnie, prowadzone na własnym
+                oddechu pacjenta z zabezpieczeniem drożności dróg oddechowych i z podażą
+                tlenu do oddychania. Wymaga ciągłego monitorowania wysycenia krwi tlenem
+                i ciśnienia tętniczego, w związku ze znacznym jego obniżeniem po zastosowanych
+                lekach. Inne parametry monitorujemy przy obecności wskazań wynikających z wywiadu
+                chorobowego, badania fizykalnego lub stanu pacjenta.
+
+              </p>
+              <p>
+
+                Wybudzenie najczęściej następuje w kilka minut po zakończeniu badania i przebiega
+                komfortowo dla pacjenta. Najczęściej jest zdziwiony, że badanie już się odbyło, ale czasem
+                wspomina piękne sny, jakie miał w trakcie znieczulenia. Pełna pamięć zdarzeń i świadomość wraca
+                do pół godziny po znieczuleniu. Mimo to niepolecane jest w tym dniu prowadzenie samochodu,
+                obsługa niebezpiecznych maszyn czy podejmowanie decyzji mających konsekwencje prawne. Można
+                natomiast po badaniu napić się czystych płynów i w dwie godziny później zjeść pierwszy
+                posiłek. Pacjent już po godzinie może w towarzystwie drugiej osoby udać się do domu.
+              </p>
               <a href="https://www.lipsum.com" target="_blank">
-                <button className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
+                <button
+                    className="bg-teal-600 text-white py-3 px-8 rounded-full shadow-md hover:bg-teal-700 transition duration-300">
                   Sprawdź nasze usługi
                 </button>
               </a>
             </div>
             <div className="md:w-1/2">
               <img
-                src="https://fizjoterapeuty.pl/wp-content/uploads/2020/05/endoskopia.jpg"
-                alt="Medical Image 1"
-                className="w-full rounded-lg shadow-lg"
+                  src="https://fizjoterapeuty.pl/wp-content/uploads/2020/05/endoskopia.jpg"
+                  alt="Medical Image 1"
+                  className="w-full rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -125,9 +146,9 @@ const Home: React.FC = () => {
           <div className="flex flex-col items-center">
             <div className="md:w-1/2">
               <img
-                src="https://medinklinika.com/wp-content/uploads/2022/03/stomatologia-zachowawcza-2-1024x683.jpg"
-                alt="Stomatologia"
-                className="w-full rounded-lg shadow-lg mb-6"
+                  src="https://medinklinika.com/wp-content/uploads/2022/03/stomatologia-zachowawcza-2-1024x683.jpg"
+                  alt="Stomatologia"
+                  className="w-full rounded-lg shadow-lg mb-6"
               />
             </div>
             <div className="md:w-2/3 text-center">
