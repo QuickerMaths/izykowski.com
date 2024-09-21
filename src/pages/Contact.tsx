@@ -11,10 +11,10 @@ const Contact = () => {
       {/* Dane kontaktowe */}
       <div className="flex flex-col items-center mb-12">
         <div className="flex items-center text-lg mb-4">
-          <span className="text-2xl mr-2">Tel</span> +48 22 111 50 05
+          <span className="text-2xl mr-2">Tel</span> +48 501-344-890
         </div>
         <div className="flex items-center text-lg mb-4">
-          <span className="text-2xl mr-2">Email</span> twój@email.com
+          <span className="text-2xl mr-2">Email</span> izykowsk@gmail.com
         </div>
 
         {/* Ikony social media */}
