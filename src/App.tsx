@@ -17,7 +17,7 @@ function App() {
         <Route path="Aktualności" element={<News />} />
         <Route path="galeria" element={<Gallery />} />
         <Route path="kalendarz" element={<CalendarPage />} />
-        <Route path="Znieczulenia" element={<JobPage />} />
+        <Route path="znieczulenia" element={<JobPage />} />
         <Route path="kontakt" element={<Contact />} />
       </Route>
     </Routes>
