@@ -89,7 +89,7 @@ const Calendar: React.FC = () => {
           {Array.from({ length: daysInMonth }, (_, day) => (
               <div
                   key={day + 1}
-                  className={`p-4 cursor-pointer border rounded-lg shadow-sm ${
+                  className={`flex items-center justify-center p-4 cursor-pointer border rounded-lg shadow-sm ${
                       selectedDate.getDate() === day + 1 &&
                       selectedDate.getMonth() === currentMonth &&
                       selectedDate.getFullYear() === currentYear

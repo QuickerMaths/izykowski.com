@@ -15,9 +15,9 @@ const JobPage: React.FC = () => {
         </h2>
 
         {/* Kafelki */}
-        <div className="flex justify-center items-center gap-12 mb-12">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 mb-12">
           {/* Kafelka - Znieczulenia u dorosłych */}
-          <div className="w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
+          <div className="w-full lg:w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
             <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
               Znieczulenie u dorosłych
             </h3>
@@ -32,7 +32,7 @@ const JobPage: React.FC = () => {
           </div>
 
           {/* Kafelka - Znieczulenia u dzieci */}
-          <div className="w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
+          <div className="w-full lg:w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
             <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
               Znieczulenie u dzieci
             </h3>
@@ -52,7 +52,7 @@ const JobPage: React.FC = () => {
           Artykuły
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Artykuł 1 - Znieczulenie ogólne */}
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h4 className="text-2xl font-bold text-gray-800 mb-4">

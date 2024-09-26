@@ -89,7 +89,7 @@ const MobileMenu = () => {
             </li>
             <li>
               <NavLink
-                to="/praca"
+                to="/Znieczulenia"
                 className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
                 style={{ textDecoration: "none" }}
                 onClick={() => setOpen(false)}

@@ -78,7 +78,7 @@ const Contact = () => {
 
           {/* Guzik "Mapa dojazdu" */}
           <a
-            href="https://www.google.com/maps/place/Berlin+Charlottenburgerhaus+107"
+            href="https://maps.app.goo.gl/fP2vUfwgHM9vB1xN8"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block bg-transparent text-teal-600 py-2 px-6 border border-teal-600 rounded-full hover:bg-teal-600 hover:text-white transition-all no-underline"
