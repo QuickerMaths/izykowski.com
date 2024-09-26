@@ -14,9 +14,9 @@ const Anesthesia: React.FC = () => {
       </h1>
 
       {/* Kafelki */}
-      <div className="flex justify-center items-center gap-12 mb-12">
+      <div className="flex-col md:flex-row flex justify-center items-center gap-3 md:gap-12 mb-5 md:mb-12">
         {/* Kafelka - Znieczulenia u dorosłych */}
-        <div className="w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
+        <div className="w-full md:w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
           <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
             Znieczulenie u dorosłych
           </h3>
@@ -32,7 +32,7 @@ const Anesthesia: React.FC = () => {
         </div>
 
         {/* Kafelka - Znieczulenia u dzieci */}
-        <div className="w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
+        <div className="w-full md:w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
           <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
             Znieczulenie u dzieci
           </h3>
@@ -49,8 +49,114 @@ const Anesthesia: React.FC = () => {
         </div>
       </div>
 
+      <nav className="bg-white shadow-md rounded-lg p-4 mb-8 w-full max-w-4xl">
+        <ol className="list-decimal pl-6 space-y-2 text-gray-700">
+          <ContraindicationItem>
+            <a href="#dorosli" className="hover:text-blue-500">
+              Znieczulanie dorosłych
+            </a>
+            <SubList>
+              <BulletPoint>
+                <a href="#dorosli1" className="hover:text-blue-500">
+                  Znieczulanie ogólne - co to jest?
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli2" className="hover:text-blue-500">
+                  Dadatkowe znieczulanie miejscowe
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli3" className="hover:text-blue-500">
+                  Kto wykonuje znieczulenia?
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli4" className="hover:text-blue-500">
+                  Rozmowa przedoperacyjna a znieczulanie
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli5" className="hover:text-blue-500">
+                  Przeciwwskazania bezwzględne ogólnomedyczne u dorosłych do
+                  znieczulenia w trybie ambulatoryjnym
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli6" className="hover:text-blue-500">
+                  Badania dodatkowe przed operacją – czy zawsze są niezbędne?
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli7" className="hover:text-blue-500">
+                  Zgoda na znieczulanie
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli8" className="hover:text-blue-500">
+                  Ciąża a znieczulanie
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli9" className="hover:text-blue-500">
+                  Świadek Jehowy
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli10" className="hover:text-blue-500">
+                  Przygotowanie do zabiegu
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli11" className="hover:text-blue-500">
+                  Przygotowanie pacjenta do znieczulenia
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli12" className="hover:text-blue-500">
+                  Samopoczucie po zabiegu
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dorosli13" className="hover:text-blue-500">
+                  Możliwe powikłania po znieczuleniu ogólnym
+                </a>
+              </BulletPoint>
+            </SubList>
+          </ContraindicationItem>
+
+          <ContraindicationItem>
+            <a href="#dzieci" className="hover:text-blue-500">
+              Znieczulanie dzieci
+            </a>
+            <SubList>
+              <BulletPoint>
+                <a href="#dzieci1" className="hover:text-blue-500">
+                  Przed znieczuleniem
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dzieci2" className="hover:text-blue-500">
+                  Znieczulenie
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="#dzieci3" className="hover:text-blue-500">
+                  Możliwe powikłania
+                </a>
+              </BulletPoint>
+              <BulletPoint>
+                <a href="dzieci4" className="hover:text-blue-500">
+                  Zabiegi ambulatoryjne u dzieci – przeciwwskazania
+                </a>
+              </BulletPoint>
+            </SubList>
+          </ContraindicationItem>
+        </ol>
+      </nav>
+
       <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-4xl font-bold mb-6 text-gray-900">
+        <h2 id="dorosli" className="text-4xl font-bold mb-6 text-gray-900">
           Znieczulenie dorosłych
         </h2>
 
@@ -65,7 +171,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Znieczulenie ogólne – co to jest?">
+        <ArticleSection id="dorosli1" title="Znieczulenie ogólne – co to jest?">
           <p>
             Znieczulenie ogólne, zwane anestezją lub nieprawidłowo (choć
             popularnie) narkozą, jest niezbędnym elementem wykonywanych zabiegów
@@ -75,7 +181,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Dodatkowe znieczulenie miejscowe">
+        <ArticleSection id="dorosli2" title="Dodatkowe znieczulenie miejscowe">
           <p>
             W wielu przypadkach znieczulenie ogólne jest łączone ze
             znieczuleniem miejscowym. Kombinacja taka zapewnia bardzo dobre
@@ -85,7 +191,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Kto wykonuje znieczulenie?">
+        <ArticleSection id="dorosli3" title="Kto wykonuje znieczulenie?">
           <p>
             Za przeprowadzenie znieczulenia, jak również utrzymanie podczas jego
             trwania podstawowych funkcji życiowych pacjenta (szczególnie
@@ -97,7 +203,53 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Badania dodatkowe przed operacją – czy zawsze są niezbędne?">
+        <ArticleSection
+          id="dorosli4"
+          title="Rozmowa przedoperacyjna a znieczulenie"
+        >
+          <p>
+            U osób chorych, z obecnością schorzenia istotnie upośledzającego
+            sprawność organizmu, rozmowę przedoperacyjną i kwalifikację do
+            zabiegu anestezjolog przeprowadza w ramach konsultacji przed
+            zabiegiem. U osób zdrowych lub z obecnością schorzenia bezobjawowego
+            lub dobrze kontrolowanego stosowanymi lekami, rozmowa
+            przedoperacyjna odbędzie się w dniu operacji. Najczęściej nie będą
+            wymagane wtedy dodatkowe badania. Lekarz-anestezjolog przeprowadzi z
+            Tobą wywiad, podczas którego zorientuje się w stanie Twojej kondycji
+            zdrowotnej, dobierze rodzaj i objaśni przebieg czekającego Cię
+            znieczulenia. W czasie tej rozmowy będziesz mógł zadać pytania i
+            uzyskać wyjaśnienia dotyczące wszystkich interesujących Cię
+            problemów dotyczących znieczulenia. Pamiętaj o zabraniu na rozmowę
+            listy stosowanych leków i wyników badań zaleconych przy zgłoszeniu
+            się do zabiegu lub operacji.
+          </p>
+        </ArticleSection>
+
+        <ArticleSection
+          id="dorosli5"
+          title="Przeciwwskazania bezwzględne ogólnomedyczne u dorosłych do znieczulenia w trybie ambulatoryjnym"
+        >
+          <ul className="list-none pl-4 space-y-1">
+            <BulletPoint>
+              choroby układu krążenia w fazie niewyrównania (objawowe)
+            </BulletPoint>
+            <BulletPoint>niewydolność nere</BulletPoint>
+            <BulletPoint>
+              ostra lub przewlekła niewydolność układu oddechowego
+            </BulletPoint>
+            <BulletPoint>infekcje dróg oddechowych</BulletPoint>
+            <BulletPoint>nieuregulowana cukrzyca</BulletPoint>
+            <BulletPoint>
+              wszelkie nieprawidłowości w budowie anatomicznej mogące utrudniać
+              intubację i wentylację, w tym szczękościsk.
+            </BulletPoint>
+          </ul>
+        </ArticleSection>
+
+        <ArticleSection
+          id="dorosli6"
+          title="Badania dodatkowe przed operacją – czy zawsze są niezbędne?"
+        >
           <p>
             W ostatnim czasie sporo zmieniło się w wymogach dotyczących
             wykonywania badań dodatkowych (i to nie z przyczyn ekonomicznych,
@@ -180,7 +332,7 @@ const Anesthesia: React.FC = () => {
           </ul>
         </ArticleSection>
 
-        <ArticleSection title="Zgoda na znieczulenie">
+        <ArticleSection id="dorosli7" title="Zgoda na znieczulenie">
           <p>
             Każde znieczulenie wymaga wyrażenia osobnej, świadomej zgody przez
             pacjenta jeszcze przed zabiegiem. Podpisanie zgody na wykonanie
@@ -198,7 +350,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Ciąża a znieczulenie">
+        <ArticleSection id="dorosli8" title="Ciąża a znieczulenie">
           <p>
             Zabiegi planowe w trybie ambulatoryjnym staramy się znieczulać po I
             trymestrze ciąży (po 3 miesiącach od zapłodnienia). Jest to związane
@@ -214,7 +366,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Świadek Jehowy">
+        <ArticleSection id="dorosli9" title="Świadek Jehowy">
           <p>
             Zabieg lub operacja jest najczęściej czynnością inwazyjną, z możliwą
             nagłą utratą większej ilości krwi. Dlatego może się zdarzyć
@@ -225,7 +377,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Przygotowanie do zabiegu">
+        <ArticleSection id="dorosli10" title="Przygotowanie do zabiegu">
           <p>
             W dniu, w którym ma się odbyć znieczulenie, zastosuj się do
             poniższych zaleceń: Przez 6 godzin przed zabiegiem niczego nie jedz.
@@ -264,7 +416,10 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Przygotowanie pacjenta do znieczulenia">
+        <ArticleSection
+          id="dorosli11"
+          title="Przygotowanie pacjenta do znieczulenia"
+        >
           <p>
             Przed dłuższym znieczuleniem, na ok. pół godziny przed zabiegiem,
             podajemy pacjentowi najczęściej tabletkę (czasem zastrzyk, syrop do
@@ -298,7 +453,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Samopoczucie po zabiegu">
+        <ArticleSection id="dorosli12" title="Samopoczucie po zabiegu">
           <p>
             Najczęściej jest bardzo dobre, ale czasem pacjent, szczególnie
             dziecko, może czuć się gorzej przez pewien czas. Ważna w tym okresie
@@ -329,7 +484,10 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Możliwe powikłania po znieczuleniu ogólnym">
+        <ArticleSection
+          id="dorosli13"
+          title="Możliwe powikłania po znieczuleniu ogólnym"
+        >
           <p>
             Nie można zapominać, że znieczulenie jest zabiegiem medycznym i
             zawsze istnieje ryzyko różnych powikłań. Jednak zabiegi wykonywane w
@@ -369,7 +527,7 @@ const Anesthesia: React.FC = () => {
           Znieczulenie dzieci
         </h2>
 
-        <ArticleSection title="Przed znieczuleniem">
+        <ArticleSection id="dzieci1" title="Przed znieczuleniem">
           <p>
             Znieczulenie dziecka nie jest tożsame ze znieczulaniem miniatury
             dorosłego. W Polsce anestezjologia pediatryczna jest częścią ogólnej
@@ -426,6 +584,57 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
+        <ArticleSection id="dzieci2" title="Znieczulanie">
+          <p>
+            Dziecko w obcych dla siebie warunkach chce być z osobami bliskimi.
+            Świetnie to rozumiemy i dlatego dopóki można, przebywa blisko
+            Rodziców. Udaje się nam czasami pozyskać zaufanie dziecka, ale
+            często, pomimo premedykacji i Państwa pomocy, początek naszego
+            spotkania bywa głośny i energiczny.
+          </p>
+          <p>
+            Na szczęście, w większości przypadków podana przez Rodzica i
+            połknięta często z oporami tabletka lub wypity syrop robią z dziecka
+            miłego, zadowolonego, choć sennego osobnika. Nie jest to jednak
+            metoda wychowawcza i takich preparatów później już do domu nie
+            wydajemy! My też nie zawsze mamy natychmiastowe sukcesy w stosowaniu
+            bezstresowych metod. W wyjątkowych przypadkach całkowitej negacji
+            naszej pracy, musimy zastosować mikrowlewkę doodbytniczą lub szybkie
+            wziewne znieczulenie ogólne, pomimo głośno wyrażanego
+            niezadowolenia. Na szczęście zastosowana premedykacja często
+            wystarcza do założenia niebieskiego lub różowego motylka, przez
+            który podajemy środki znieczulające, a dodatkowo daje niepamięć
+            wszystkich nieprzyjemnych zdarzeń. W przypadku dzieci akceptujących
+            nasze postępowanie, o ile nie stoi na przeszkodzie brak widocznych
+            żył, sensowne jest założenie w miejsce wkłucia maści znieczulającej.
+          </p>
+          <p>
+            Samo znieczulenie i zabieg wykonujemy bez obecności Rodziców.
+            Musicie nam zaufać, że chcemy jak najlepiej dla Waszego dziecka i w
+            tym momencie musimy zajmować się tylko nim. W wielu przypadkach
+            znieczulenie ogólne jest łączone ze znieczuleniem miejscowym.
+            Kombinacja taka zapewnia bardzo dobre działanie przeciwbólowe w
+            czasie i po zabiegu, przyczynia się do zmniejszenia ilości
+            podawanych dziecku w czasie zabiegu leków oraz zapewnia długi okres
+            bezbolesności po zakończonym zabiegu operacyjnym
+          </p>
+          <p>
+            Po zabiegu, od momentu powrotu wszystkich czynności życiowych,
+            będziecie znowu przy budzącym się dziecku i bardzo wtedy
+            potrzebujemy Waszej pomocy w opiece nad nim. Prosimy wtedy o
+            zapewnienie poczucia bezpieczeństwa często jeszcze nie w pełni
+            świadomemu dziecku, chronienie go przed możliwością urazu. Tym
+            bardziej że ze świadomością narasta stopień rozżalenia i tylko
+            Rodzice są w stanie to uczucie poskromić. Ze względu na stosowane
+            leki i techniki znieczulenia dziecko szybko wraca do pełnej
+            wydolności i często już po 30 minutach od zakończenia znieczulenia
+            może wrócić do domu. A tam może dostać pić, dwie godziny później
+            jeść i – jeżeli będzie wskazane – proste leki przeciwbólowe (np.
+            paracetamol w dowolnej formie). Takie postępowanie pozwoli na dużo
+            milszą atmosferę przy ewentualnym kolejnym spotkaniu.
+          </p>
+        </ArticleSection>
+
         <ArticleSection title="Znieczulanie">
           <p>
             Dziecko w obcych dla siebie warunkach chce być z osobami bliskimi.
@@ -477,7 +686,7 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Możliwe powikłania">
+        <ArticleSection id="dzieci3" title="Możliwe powikłania">
           <p>
             Powikłania zagrażające życiu lub powodujące trwałe kalectwo są
             niezwykle rzadkie przy obecnie stosowanym sprzęcie i lekach. Pełne
@@ -518,7 +727,6 @@ const Anesthesia: React.FC = () => {
             znieczulające, a choroby wymagające w tym wieku licznych zabiegów w
             znieczuleniu.
           </p>
-          <p></p>
           <p>
             Po zabiegu, od momentu powrotu wszystkich czynności życiowych,
             będziecie znowu przy budzącym się dziecku i bardzo wtedy
@@ -536,7 +744,10 @@ const Anesthesia: React.FC = () => {
           </p>
         </ArticleSection>
 
-        <ArticleSection title="Zabiegi ambulatoryjne u dzieci - przeciwskazania">
+        <ArticleSection
+          id="dzieci4"
+          title="Zabiegi ambulatoryjne u dzieci - przeciwskazania"
+        >
           <ol className="list-decimal pl-6 space-y-2 text-gray-700">
             <ContraindicationItem>
               Zwiększone ryzyko związane z obecnością niewyrównanych schorzeń.

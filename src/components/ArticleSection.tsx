@@ -1,14 +1,17 @@
 import { ReactNode } from "react";
 
 interface ArticleSectionProps {
+  id?: string;
   title: string;
   children: ReactNode;
 }
 
-const ArticleSection = ({ title, children }: ArticleSectionProps) => {
+const ArticleSection = ({ id, title, children }: ArticleSectionProps) => {
   return (
     <div className="mb-8">
-      <h4 className="text-2xl font-bold mb-4 text-gray-800">{title}</h4>
+      <h4 id={id} className="text-2xl font-bold mb-4 text-gray-800">
+        {title}
+      </h4>
       <div className="text-gray-700">{children}</div>
     </div>
   );
