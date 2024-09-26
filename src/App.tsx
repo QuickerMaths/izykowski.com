@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import CalendarPage from "./pages/Calendar";
-import JobPage from "@/pages/job.tsx";
+import Anesthesia from "@/pages/Anesthesia.tsx";
 import Contact from "./pages/Contact";
 import News from "./pages/News";
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="Aktualności" element={<News />} />
         <Route path="galeria" element={<Gallery />} />
         <Route path="kalendarz" element={<CalendarPage />} />
-        <Route path="znieczulenia" element={<JobPage />} />
+        <Route path="znieczulenia" element={<Anesthesia />} />
         <Route path="kontakt" element={<Contact />} />
       </Route>
     </Routes>
