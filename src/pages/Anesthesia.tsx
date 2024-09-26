@@ -49,7 +49,7 @@ const Anesthesia: React.FC = () => {
         </div>
       </div>
 
-      <nav className="bg-white shadow-md rounded-lg p-4 mb-8 w-full max-w-4xl">
+      <nav className="mx-auto bg-white shadow-md rounded-lg p-4 mb-8 w-full max-w-4xl">
         <ol className="list-decimal pl-6 space-y-2 text-gray-700">
           <ContraindicationItem>
             <a href="#dorosli" className="hover:text-blue-500">
