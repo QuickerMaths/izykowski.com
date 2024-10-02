@@ -1,5 +1,7 @@
 import { ArticleSection, BulletPoint, ContraindicationItem, SubList } from "@/components/ArticleSection";
 
+// @ts-ignore
+
 const AnesthesiaCard = ({ title, imageUrl, description }) => {
   return (
     <div className="relative group w-full md:w-1/2 max-w-sm shadow-lg rounded-lg overflow-hidden">
