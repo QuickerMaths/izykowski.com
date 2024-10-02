@@ -31,6 +31,7 @@ const Home: React.FC = () => {
                 Indywidualna Specjalistyczna Praktyka Lekarska <br /> LEK. MED.
                 Jan Iżykowski
               </h1>
+
               {/* Przyciski w jednej linii */}
               <div className="flex space-x-4">
                 <Link to="/o-mnie">
