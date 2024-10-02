@@ -1,11 +1,24 @@
-import {
-  ArticleSection,
-  BulletPoint,
-  ContraindicationItem,
-  SubList,
-} from "@/components/ArticleSection";
+import { ArticleSection, BulletPoint, ContraindicationItem, SubList } from "@/components/ArticleSection";
 
-const Anesthesia: React.FC = () => {
+const AnesthesiaCard = ({ title, imageUrl, description }) => {
+  return (
+    <div className="relative group w-full md:w-1/2 max-w-sm shadow-lg rounded-lg overflow-hidden">
+      {/* Obrazek */}
+      <img
+        src={imageUrl}
+        alt={title}
+        className="w-full h-64 object-cover transition duration-500 ease-in-out transform group-hover:scale-105 group-hover:brightness-75"
+      />
+      {/* Kontener na tekst, który się wysunie */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+        <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+        <p className="text-white text-sm">{description}</p>
+      </div>
+    </div>
+  );
+};
+
+const Anesthesia = () => {
   return (
     <div className="p-6 bg-gray-100">
       {/* Główna sekcja */}
@@ -15,38 +28,19 @@ const Anesthesia: React.FC = () => {
 
       {/* Kafelki */}
       <div className="flex-col md:flex-row flex justify-center items-center gap-3 md:gap-12 mb-5 md:mb-12">
-        {/* Kafelka - Znieczulenia u dorosłych */}
-        <div className="w-full md:w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-            Znieczulenie u dorosłych
-          </h3>
-          <img
-            src="https://dpmed.pl/wp-content/uploads/2020/07/AdobeStock_132867660-1.jpeg"
-            alt="Znieczulenie u dorosłych"
-            className="w-full h-56 object-cover mb-4 rounded-lg shadow-md"
-          />
-          <p className="text-lg text-gray-600 leading-relaxed text-center">
-            Znieczulenie stosowane podczas zabiegów chirurgicznych u dorosłych,
-            dobierane w zależności od rodzaju operacji i stanu zdrowia pacjenta.
-          </p>
-        </div>
+        {/* Karta - Znieczulenia u dorosłych */}
+        <AnesthesiaCard
+          title="Znieczulenie u dorosłych"
+          imageUrl="https://dpmed.pl/wp-content/uploads/2020/07/AdobeStock_132867660-1.jpeg"
+          description="Znieczulenie stosowane podczas zabiegów chirurgicznych u dorosłych, dobierane w zależności od rodzaju operacji i stanu zdrowia pacjenta."
+        />
 
-        {/* Kafelka - Znieczulenia u dzieci */}
-        <div className="w-full md:w-1/2 max-w-sm shadow-lg rounded-lg bg-white p-6">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-            Znieczulenie u dzieci
-          </h3>
-          <img
-            src="https://polki.pl/foto/16_9_LARGE/jakie-znieczulenie-stosuje-sie-u-dzieci-1623848.jpg"
-            alt="Znieczulenie u dzieci"
-            className="w-full h-56 object-cover mb-4 rounded-lg shadow-md"
-          />
-          <p className="text-lg text-gray-600 leading-relaxed text-center">
-            Znieczulenie u dzieci stosuje się, aby zminimalizować ból i stres
-            związany z zabiegami medycznymi, zapewniając maksymalne
-            bezpieczeństwo.
-          </p>
-        </div>
+        {/* Karta - Znieczulenia u dzieci */}
+        <AnesthesiaCard
+          title="Znieczulenie u dzieci"
+          imageUrl="https://polki.pl/foto/16_9_LARGE/jakie-znieczulenie-stosuje-sie-u-dzieci-1623848.jpg"
+          description="Znieczulenie u dzieci stosuje się, aby zminimalizować ból i stres związany z zabiegami medycznymi, zapewniając maksymalne bezpieczeństwo."
+        />
       </div>
 
       <nav className="mx-auto bg-white shadow-md rounded-lg p-4 mb-8 w-full max-w-4xl">
