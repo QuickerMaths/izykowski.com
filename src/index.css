@@ -60,6 +60,69 @@
   }
 }
 
+/* Responsiveness tweaks */
+@media (max-width: 768px) {
+  /* Make sure header elements adjust properly */
+  @media (max-width: 768px) {
+    .header {
+      padding: 0.5rem;
+    }
+
+    .navbar ul {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .navbar ul li {
+      margin-bottom: 1rem;
+    }
+
+    .btn-primary, .btn-secondary {
+      font-size: 1rem;
+      padding: 1rem;
+      width: 100%;
+    }
+  }
+
+  /* Make sure container adjusts properly */
+  .container {
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+
+  /* Image adjustments */
+  .responsive-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Fix layout for forms on small screens */
+  input, textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Make the footer adjust to mobile screens */
+  .footer {
+    display: block;
+    text-align: center;
+  }
+
+  /* Adjust cards for smaller screens */
+  .card {
+    margin: 1rem 0;
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  /* Ensuring grid layout is responsive */
+  .grid {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @layer base {
   /* Default border and background styling for all elements */
   * {
@@ -72,13 +135,10 @@
   }
 
   /* Additional base elements styling suggestions */
-
-  /* Add default border radius for elements */
   .rounded {
     border-radius: var(--radius);
   }
 
-  /* Default card styling */
   .card {
     background-color: var(--card);
     color: var(--card-foreground);
@@ -86,41 +146,36 @@
     @apply shadow-lg p-4;
   }
 
-  /* Button styling for primary buttons */
   .btn-primary {
     background-color: var(--primary);
     color: var(--primary-foreground);
     @apply py-2 px-4 rounded-lg shadow hover:bg-opacity-90 transition duration-300;
   }
 
-  /* Muted and secondary button styling */
   .btn-secondary {
     background-color: var(--secondary);
     color: var(--secondary-foreground);
     @apply py-2 px-4 rounded-lg shadow hover:bg-opacity-80 transition duration-300;
   }
 
-  /* Adding border and hover effect to input elements */
   input {
     border-color: var(--border);
     background-color: var(--input);
     @apply rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-ring;
   }
 
-  /* Accent color for links */
   a {
     color: var(--accent-foreground);
     @apply underline hover:text-primary transition-colors;
   }
 
-  /* Box shadow and transition for popovers */
   .popover {
     background-color: var(--popover);
     color: var(--popover-foreground);
     @apply rounded-lg shadow-md p-4 transition duration-300;
   }
 
-  /* Default styling for charts */
+  /* Charts */
   .chart-color-1 {
     background-color: hsl(var(--chart-1));
   }
@@ -140,18 +195,22 @@
   .chart-color-5 {
     background-color: hsl(var(--chart-5));
   }
-  @media (max-width: 768px) {
-    .navbar {
-      display: block;
-      width: 100%;
-    }
-    .navbar ul {
-      display: none;
-    }
-    .navbar.open ul {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-  }
 }
+/* Styl wideo dla responsywności */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
