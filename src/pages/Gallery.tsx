@@ -22,25 +22,25 @@ const images = [
 
 const Gallery: React.FC = () => {
   return (
-    <div className="bg-[#F5F5F5] min-h-screen py-10">
-      <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">Galeria</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:scale-105"
-            >
-              <img
-                src={image}
-                alt={`Gallery image ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+      <div className="bg-[#F5F5F5] min-h-screen py-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold text-center mb-8">Galeria</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {images.map((image, index) => (
+                <div
+                    key={index}
+                    className="relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:scale-105"
+                >
+                  <img
+                      src={image}
+                      alt={`Gallery image ${index + 1}`}
+                      className="w-full h-full object-cover"
+                  />
+                </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 
