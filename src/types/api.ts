@@ -3,6 +3,14 @@ export interface IImageResource {
   id: number;
 }
 
+export interface INewsResource {
+  id: number;
+  title: string;
+  params: {
+    content: string;
+  };
+}
+
 export interface IAdminJSResponse<T> {
   meta: {
     direction: "acs" | "dsc";
