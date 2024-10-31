@@ -6,7 +6,7 @@ import Gallery from "./pages/Gallery";
 import CalendarPage from "./pages/Calendar";
 import Contact from "./pages/Contact";
 import News from "./pages/News";
-import { Activity } from "lucide-react";
+import  Activity  from "./pages/Activity";
 
 function App() {
     return (
