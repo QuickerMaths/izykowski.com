@@ -6,7 +6,6 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd(), "");
     return {
         define: {
-            "process.env": process.env,
             VITE_BACKEND_URL: JSON.stringify(env.VITE_BACKEND_URL),
             VITE_AWS_BUCKET_NAME: JSON.stringify(env.VITE_AWS_BUCKET_NAME),
             VITE_AWS_REGION: JSON.stringify(env.VITE_AWS_REGION),
