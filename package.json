@@ -14,13 +14,9 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
-=======
-    "@radix-ui/react-dialog": "^1.1.2",
->>>>>>> c05e2c96482f4794ca64f8a2cbe0f2350e0edab9
     "@radix-ui/react-slot": "^1.1.0",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",
