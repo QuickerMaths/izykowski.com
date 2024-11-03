@@ -154,7 +154,7 @@ const MobileMenu = ({ handleNavigation }: MenuProps) => {
                                 }}
                                 className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
                             >
-                                Działaność
+                                Działalność
                             </NavLink>
                         </li>
                         <li>
@@ -270,7 +270,7 @@ const DesktopMenu = ({ handleNavigation }: MenuProps) => {
                         }}
                         className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
                     >
-                        Działaność
+                        Działalność
                     </NavLink>
                 </li>
                 <li>
