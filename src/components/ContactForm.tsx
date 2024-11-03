@@ -16,6 +16,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { IoReload } from "react-icons/io5";
 import { formSchema } from "@/schemas/formSchema";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
     const formRef = useRef() as MutableRefObject<HTMLFormElement>;
@@ -23,7 +24,7 @@ const ContactForm = () => {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            subject: "",
+            name: "",
             email: "",
             message: "",
             hidden: "",
@@ -31,7 +32,20 @@ const ContactForm = () => {
     });
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
+        try {
+            const res = await emailjs.send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TAMPLATE_ID,
+                values,
+                {
+                    publicKey: import.meta.env.VITE_EMAILJS_PB_KEY,
+                },
+            );
+
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -50,7 +64,7 @@ const ContactForm = () => {
                 >
                     <FormField
                         control={form.control}
-                        name="subject"
+                        name="name"
                         render={({ field }) => (
                             <FormItem>
                                 <FormLabel className="sr-only">Subject</FormLabel>
@@ -62,7 +76,7 @@ const ContactForm = () => {
                                     />
                                 </FormControl>
                                 <FormDescription className="sr-only">
-                                    Input field for subject of a email
+                                    Input field for name of a email
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
