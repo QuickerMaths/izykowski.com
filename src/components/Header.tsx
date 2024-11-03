@@ -12,7 +12,11 @@ interface MenuProps {
 
 const Menu = ({ handleNavigation }: MenuProps) => {
     const [width] = useDeviceSize();
-    return width > 768 ? <DesktopMenu handleNavigation={handleNavigation} /> : <MobileMenu handleNavigation={handleNavigation} />;
+    return width > 768 ? (
+        <DesktopMenu handleNavigation={handleNavigation} />
+    ) : (
+        <MobileMenu handleNavigation={handleNavigation} />
+    );
 };
 
 const Header = () => {
@@ -31,9 +35,8 @@ const Header = () => {
         <header className="fixed top-0 left-0 w-full bg-white z-50">
             {/* Overlay square animation */}
             <div
-                className={`fixed top-[4rem] left-0 w-full h-[calc(100%-4rem)] bg-teal-500 transition-transform duration-1000 ${
-                    animate ? "translate-x-0 z-[9998]" : "translate-x-full"
-                }`}
+                className={`fixed top-[4rem] left-0 w-full h-[calc(100%-4rem)] bg-teal-500 transition-transform duration-1000 ${animate ? "translate-x-0 z-[9998]" : "translate-x-full"
+                    }`}
             ></div>
 
             <Container className="flex items-center justify-end md:justify-between py-4 px-6 from-gray-100 rounded-md z-[9999]">
@@ -126,18 +129,32 @@ const MobileMenu = ({ handleNavigation }: MenuProps) => {
                                 Kalendarz
                             </NavLink>
                         </li>
+                        {/*<li>*/}
+                        {/*    <NavLink*/}
+                        {/*        to="/Znieczulenia"*/}
+                        {/*        style={{ textDecoration: "none" }}*/}
+                        {/*        onClick={(e) => {*/}
+                        {/*            e.preventDefault();*/}
+                        {/*            setOpen(false);*/}
+                        {/*            handleNavigation("/Znieczulenia");*/}
+                        {/*        }}*/}
+                        {/*        className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"*/}
+                        {/*    >*/}
+                        {/*        Znieczulenia*/}
+                        {/*    </NavLink>*/}
+                        {/*</li>*/}
                         <li>
                             <NavLink
-                                to="/Znieczulenia"
+                                to="/dzialanosc"
                                 style={{ textDecoration: "none" }}
                                 onClick={(e) => {
                                     e.preventDefault();
                                     setOpen(false);
-                                    handleNavigation("/Znieczulenia");
+                                    handleNavigation("/dzialanosc");
                                 }}
                                 className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
                             >
-                                Znieczulenia
+                                Działalność
                             </NavLink>
                         </li>
                         <li>
@@ -230,17 +247,30 @@ const DesktopMenu = ({ handleNavigation }: MenuProps) => {
                         Kalendarz
                     </NavLink>
                 </li>
+                {/*<li>*/}
+                {/*    <NavLink*/}
+                {/*        to="/Znieczulenia"*/}
+                {/*        style={{ textDecoration: "none" }}*/}
+                {/*        onClick={(e) => {*/}
+                {/*            e.preventDefault();*/}
+                {/*            handleNavigation("/Znieczulenia");*/}
+                {/*        }}*/}
+                {/*        className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"*/}
+                {/*    >*/}
+                {/*        Znieczulenia*/}
+                {/*    </NavLink>*/}
+                {/*</li>*/}
                 <li>
                     <NavLink
-                        to="/Znieczulenia"
+                        to="/dzialanosc"
                         style={{ textDecoration: "none" }}
                         onClick={(e) => {
                             e.preventDefault();
-                            handleNavigation("/Znieczulenia");
+                            handleNavigation("/dzialanosc");
                         }}
                         className="px-4 py-2 hover:text-teal-500 transition duration-300 border-l border-r"
                     >
-                        Znieczulenia
+                        Działalność
                     </NavLink>
                 </li>
                 <li>
