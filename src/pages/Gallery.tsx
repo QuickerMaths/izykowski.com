@@ -20,7 +20,7 @@ const Gallery: React.FC = () => {
               className="relative overflow-hidden rounded-lg shadow-lg transition duration-300 transform hover:scale-105"
             >
               <img
-                src={`https://cdn.medme.pl/zdjecie/19922,510,340,1/lekarz-poz.jpg`}
+                src={`https://s3-${import.meta.env.VITE_AWS_REGION}.amazonaws.com/${import.meta.env.VITE_AWS_BUCKET_NAME}/${title}`}
                 alt={`Gallery image ${id}`}
                 className="w-full h-full object-cover"
               />
