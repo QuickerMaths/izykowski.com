@@ -23,6 +23,9 @@ const Activity = () => {
         <div className="bg-gray-50 min-h-screen py-10">
             <div className="w-11/12 max-w-4xl mx-auto">
                 <h1 className="text-3xl font-bold text-center mb-8">Działalności</h1>
+                <h1 className="text-3xl text-center mb-8">
+                   Firmy z którymi współpracuje
+                </h1>
                 <div className="space-y-8">
                     {links.map((link) => (
                         <a
